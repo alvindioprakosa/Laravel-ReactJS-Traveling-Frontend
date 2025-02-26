@@ -121,7 +121,7 @@ function Home() {
 								</div>
 								<Link to="/wisata">
 									<button className="text-sm font-normal text-gray-500">
-										Show More
+										Lihat Selengkapnya	
 									</button>
 								</Link>
 							</div>
@@ -153,7 +153,7 @@ function Home() {
 								</div>
 								<Link to="/edukasi">
 									<button className="text-sm font-normal text-gray-500">
-										Show More
+										Lihat Selengkapnya
 									</button>
 								</Link>
 							</div>
