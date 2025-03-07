@@ -30,100 +30,100 @@ import FAQ from "../pages/misc/FAQ";
 import Pricing from "../pages/misc/Pricing";
 
 function Routes() {
-	return (
-		<Switch>
-			<PrivateRoute exact path="/user/dashboard">
-				<Dashboard />
-			</PrivateRoute>
+  return (
+    <Switch>
+      <PrivateRoute exact path="/user/dashboard">
+        <Dashboard />
+      </PrivateRoute>
 
-			<PrivateRoute exact path="/user/account">
-				<Account />
-			</PrivateRoute>
+      <PrivateRoute exact path="/user/account">
+        <Account />
+      </PrivateRoute>
 
-			<PrivateRoute exact path="/user/change-password">
-				<ChangePassword />
-			</PrivateRoute>
+      <PrivateRoute exact path="/user/change-password">
+        <ChangePassword />
+      </PrivateRoute>
 
-			<PrivateRoute exact path="/user/my-favorite">
-				<MyFavorite />
-			</PrivateRoute>
+      <PrivateRoute exact path="/user/my-favorite">
+        <MyFavorite />
+      </PrivateRoute>
 
-			<PrivateRoute exact path="/user/purchase">
-				<Purchase/>
-			</PrivateRoute>
+      <PrivateRoute exact path="/user/purchase">
+        <Purchase />
+      </PrivateRoute>
 
-			{/* route "/login" */}
-			<Route exact path="/login">
-				<Login />
-			</Route>
+      {/* route "/login" */}
+      <Route exact path="/login">
+        <Login />
+      </Route>
 
-			{/* route "/register" */}
-			<Route exact path="/register">
-				<Register />
-			</Route>
+      {/* route "/register" */}
+      <Route exact path="/register">
+        <Register />
+      </Route>
 
-			{/* route "/forgot-password" */}
-			<Route exact path="/forgot-password">
-				<ForgotPassword />
-			</Route>
+      {/* route "/forgot-password" */}
+      <Route exact path="/forgot-password">
+        <ForgotPassword />
+      </Route>
 
-			{/* route "/verify-email" */}
-			<VerifRoutes exact path="/verify-email">
-				<VerifyEmail />
-			</VerifRoutes>
+      {/* route "/verify-email" */}
+      <VerifRoutes exact path="/verify-email">
+        <VerifyEmail />
+      </VerifRoutes>
 
-			{/* route "/reset-password" */}
-			<Route exact path="/reset-password/:token">
-				<ResetPassword />
-			</Route>
+      {/* route "/reset-password" */}
+      <Route exact path="/reset-password/:token">
+        <ResetPassword />
+      </Route>
 
-			{/* route "/" */}
-			<Route exact path="/">
-				<Home />
-			</Route>
+      {/* route "/" */}
+      <Route exact path="/">
+        <Home />
+      </Route>
 
-			{/* route "/Tour" */}
-			<Route exact path="/wisata">
-				<Tours />
-			</Route>
-			{/* private route "/wisata/:slug" */}
-			<Route exact path="/wisata/:slug">
-				<TourDetail />
-			</Route>
+      {/* route "/Tour" */}
+      <Route exact path="/wisata">
+        <Tours />
+      </Route>
+      {/* private route "/wisata/:slug" */}
+      <Route exact path="/wisata/:slug">
+        <TourDetail />
+      </Route>
 
-			{/* route "/Education" */}
-			<Route exact path="/edukasi">
-				<Educations />
-			</Route>
-			{/* private route "/edukasi/:slug" */}
-			<Route exact path="/edukasi/:slug">
-				<EducationDetail />
-			</Route>
+      {/* route "/Education" */}
+      <Route exact path="/edukasi">
+        <Educations />
+      </Route>
+      {/* private route "/edukasi/:slug" */}
+      <Route exact path="/edukasi/:slug">
+        <EducationDetail />
+      </Route>
 
-			{/* route "/Article" */}
-			<Route exact path="/blog">
-				<Blog />
-			</Route>
+      {/* route "/Article" */}
+      <Route exact path="/blog">
+        <Blog />
+      </Route>
 
-			{/* route blog/:slug */}
-			<Route exact path="/blog/:slug">
-				<BlogDetail />
-			</Route>
+      {/* route blog/:slug */}
+      <Route exact path="/blog/:slug">
+        <BlogDetail />
+      </Route>
 
-			{/* pathing & linking on footer */}
-			<Route exact path="/about-us">
-				<AboutUs />
-			</Route>
+      {/* pathing & linking on footer */}
+      <Route exact path="/about-us">
+        <AboutUs />
+      </Route>
 
-			<Route exact path="/faq">
-				<FAQ />
-			</Route>
+      <Route exact path="/faq">
+        <FAQ />
+      </Route>
 
-			<Route exact path="/pricing">
-				<Pricing />
-			</Route>
-		</Switch>
-	);
+      <Route exact path="/pricing">
+        <Pricing />
+      </Route>
+    </Switch>
+  );
 }
 
 export default Routes;
