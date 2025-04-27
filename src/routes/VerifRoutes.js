@@ -1,7 +1,7 @@
-//import cookie
+// import cookie
 import Cookies from "js-cookie";
 
-//import react router dom
+// import react-router-dom
 import { Route, Redirect } from "react-router-dom";
 
 function VerifRoutes({ children, ...rest }) {
@@ -9,9 +9,12 @@ function VerifRoutes({ children, ...rest }) {
   const status = Cookies.get("status_verified");
 
   return (
-    <Route {...rest}>
-      {token && status === "false" ? children : <Redirect to="/" />}
-    </Route>
+    <Route
+      {...rest}
+      render={() => 
+        token && status === "false" ? children : <Redirect to="/" />
+      }
+    />
   );
 }
 
