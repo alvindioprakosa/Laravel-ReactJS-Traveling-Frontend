@@ -59,21 +59,25 @@ function Comment({ comment, fetchDataBlog }) {
           className="rounded-full"
         />
         <div className="flex-col">
-          <p className="font-semibold text-md ml-1 text-gray-500">{comment.user.name}</p>
-          <p className="ml-1 text-xs text-gray-500">{moment(comment.created_at).fromNow()}</p>
+          <p className="font-semibold text-md ml-1 text-gray-500">
+            {comment.user.name}
+          </p>
+          <p className="ml-1 text-xs text-gray-500">
+            {moment(comment.created_at).fromNow()}
+          </p>
         </div>
       </div>
-      
+
       {/* Delete button only for the logged-in user's own comments */}
       {comment.user.id === userId && (
-        <button 
-          className="float-right mr-3 text-red-500" 
+        <button
+          className="float-right mr-3 text-red-500"
           onClick={() => removeComment(comment.id)}
         >
           Delete
         </button>
       )}
-      
+
       <p className="ml-5 mt-2 mb-4 text-gray-500">{comment.comment}</p>
     </div>
   );
