@@ -1,15 +1,15 @@
 // import axios
-import axios from 'axios';
+import axios from "axios";
 
 // import js-cookie
-import Cookies from 'js-cookie';
+import Cookies from "js-cookie";
 
 // create axios instance
 const Api = axios.create({
   baseURL: process.env.REACT_APP_BASEURL,
   headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
+    Accept: "application/json",
+    "Content-Type": "application/json",
   },
 });
 
@@ -18,8 +18,8 @@ Api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      Cookies.remove('token');
-      window.location.href = '/login';
+      Cookies.remove("token");
+      window.location.href = "/login";
     }
     return Promise.reject(error);
   }
